@@ -1,1 +1,1 @@
-# [Programação em Bancos de Dados](http://github.com/IgorAvilaPereira/pbd2022_2sem/wiki)
+# [Projeto e Modelagem de Banco de Dados](http://github.com/IgorAvilaPereira/pmbd2022_2sem/wiki)
