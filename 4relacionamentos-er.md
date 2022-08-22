@@ -117,3 +117,8 @@ Imagine que tenhamos duas entidades **Cliente** e **Produto** ligadas pelo relac
 ![agregacao-sem](agregacao-sem.png)
 
 É importante ressaltar que um mesmo problema pode ter diferentes interpretações, e assim gerar diagramas diferenciados. Isso não significa que apenas um dos diagramas está certo.
+
+
+# Resumo 
+
+![resumo-er](resumo-er.png)
