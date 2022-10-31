@@ -30,11 +30,14 @@ CREATE TABLE cliente (
     dados_pagamento text,
     empresa_id integer references empresa (id)
 );
+INSERT INTO cliente (cpf, nome, empresa_id) VALUES
+('22222222222', 'MANUELA', 1);
 
 CREATE TABLE categoria (
     id serial primary key,
     descricao text not null
 );
+INSERT INTO categoria (descricao) VALUES ('ROMANCE');
 
 CREATE TABLE filme (
     id serial primary key,
@@ -42,17 +45,20 @@ CREATE TABLE filme (
     sinopse text,
     preco money,
     categoria_id integer references categoria (id)
-
 );
+INSERT INTO filme (titulo, sinopse, preco, categoria_id) VALUES
+('TITANIC', 'JACK PODERIA TER PEGO UMA PORTA MAIOR', 2.00, 1);
 
 CREATE TABLE aluguel (
     id serial primary key,
-    data_inicio date,
-    data_fim date,
+    data_inicio date DEFAULT CURRENT_DATE,
+    data_fim date check (data_fim >= data_inicio),
     valor money,
     cliente_id integer references cliente (id),
     filme_id integer references filme (id)
 );
+INSERT INTO aluguel (data_fim, valor, cliente_id, filme_id)
+VALUES ('2022-11-07', 2.00, 1, 1);
 
 CREATE TABLE ator (
     id serial primary key,
